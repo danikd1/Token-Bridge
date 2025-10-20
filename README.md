@@ -1,6 +1,6 @@
 ## ДЗ №1 — Кроссчейн мост между сетями
 
-## Задание 2: Создание токена
+## Задание 1: Создание токена
 ### Установка
 ```bash
 npm install
@@ -50,6 +50,9 @@ export FROM_ADDRESS=0x...
 export AMOUNT=500000000000000000
 npm run burn
 ```
+Результат работы
+<img width="1159" height="1098" alt="Снимок экрана 2025-10-15 в 17 56 48" src="https://github.com/user-attachments/assets/84220ba5-8e13-45b6-a936-534d9812f682" />
+
 
 ## Задание 2: Разработка моста
 
@@ -114,6 +117,11 @@ npm run bridge:fulfill
 - Повторный `fulfill` с тем же `DEPOSIT_ID` ревертится с `AlreadyProcessed`.
 - Вызов `fulfill` от неразрешённого адреса ревертится с `NotRelayer`.
 
+Результат работы
+<img width="1157" height="1099" alt="Снимок экрана 2025-10-15 в 17 58 19" src="https://github.com/user-attachments/assets/29c0ce14-674c-4876-9b6a-c50c984ef6f1" />
+
+<img width="1270" height="1104" alt="Снимок экрана 2025-10-15 в 20 38 58" src="https://github.com/user-attachments/assets/eef29a2e-7cc0-460f-b2f6-4f6885a5bcbf" />
+
 ## Задание 3: Взаимодействие между сетями
 ## Релэйер
 ### Быстрый старт (локально в одной сети для демонстрации)
@@ -139,6 +147,9 @@ unset DEPOSIT_ID
 npm run bridge:deposit
 ```
 Релэйер в логах увидит `Deposited` и выполнит `fulfill` автоматически.
+
+Результат работы
+<img width="1792" height="1082" alt="Снимок экрана 2025-10-16 в 21 50 25" src="https://github.com/user-attachments/assets/e2242630-e2b4-4994-bb90-39dd62b7e8e0" />
 
 ## Задание 4: Тестирование и деплой (полный цикл)
 ### Юнит-тесты для контракта моста
@@ -221,3 +232,7 @@ export DST_BRIDGE=$(jq -r '.networks.B.bridge' deployment.json)
 export RELAYER_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
 npm run relayer
 ```
+
+Результат работы
+<img width="1791" height="1088" alt="Снимок экрана 2025-10-20 в 20 17 36" src="https://github.com/user-attachments/assets/1e3d223b-f063-4921-a64d-1d1e0ca026db" />
+
