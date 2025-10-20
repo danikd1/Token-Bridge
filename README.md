@@ -225,12 +225,6 @@ npm run deploy:multi
 
 # 3) Интеграционный тест
 npm run test:integration
-
-# 4) Проверка логов релэйера (опционально)
-export SRC_BRIDGE=$(jq -r '.networks.A.bridge' deployment.json)
-export DST_BRIDGE=$(jq -r '.networks.B.bridge' deployment.json)
-export RELAYER_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
-npm run relayer
 ```
 
 Результат работы
