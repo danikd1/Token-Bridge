@@ -1,0 +1,20 @@
+ethers.formatUnits(await t.balanceOf(accs[0].address), 18) // деплойер: уменьшился на 0.5
+ethers.formatUnits(await t.balanceOf("0x70997970C51812dc3A010C7d01b50e0d17dc79C8"), 18) 
+ethers.formatUnits(await t.balanceOf("0x7099..."), 18)     // получатель: увеличился на 0.5
+ethers.formatUnits(await t.balanceOf(accs[0].address), 18) // деплойер: уменьшился на 0.5
+const accs = await ethers.getSigners();
+const t = await ethers.getContractAt("TrustedToken", process.env.TOKEN_ADDRESS);
+(await t.balanceOf("0x70997970C51812dc3A010C7d01b50e0d17dc79C8")).toString()
+(await t.balanceOf("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266")).toString()
+const t = await ethers.getContractAt("TrustedToken", "0x5FbDB2315678afecb367f032d93F642f64180aa3");
+(await t.balanceOf("0x70997970C51812dc3A010C7d01b50e0d17dc79C8")).toString()
+(await t.balanceOf("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266")).toString()
+const t = await ethers.getContractAt("TrustedToken", "0x5FbDB2315678afecb367f032d93F642f64180aa3");
+(await t.balanceOf("0x7099...")).toString()
+(await t.balanceOf("0xf39F...")).toString()  
+const t = await ethers.getContractAt("TrustedToken", process.env.TOKEN_ADDRESS);
+(await token.balanceOf(process.env.TO_ADDRESS)).toString()
+const token = await ethers.getContractAt("TrustedToken", process.env.TOKEN_ADDRESS);
+export FROM_ADDRESS=$TO_ADDRESS
+(await token.balanceOf(process.env.TO_ADDRESS)).toString()
+const token = await ethers.getContractAt("TrustedToken", process.env.TOKEN_ADDRESS);

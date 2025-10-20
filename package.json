@@ -1,0 +1,30 @@
+{
+  "name": "token-bridge-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:bridge": "hardhat run scripts/deployBridge.js --network localhost",
+    "bridge:setRelayer": "hardhat run scripts/setRelayer.js --network localhost",
+    "bridge:deposit": "hardhat run scripts/bridgeDeposit.js --network localhost",
+    "bridge:fulfill": "hardhat run scripts/bridgeFulfill.js --network localhost",
+    "set:trusted": "hardhat run scripts/setTrusted.js --network localhost",
+    "mint": "hardhat run scripts/trustedMint.js --network localhost",
+    "burn": "hardhat run scripts/trustedBurn.js --network localhost",
+    "relayer": "node scripts/relayer.js",
+    "deploy:multi": "hardhat run scripts/deployMultiNetwork.js --network localhost",
+    "test:integration": "node scripts/integrationTest.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@openzeppelin/contracts": "^5.4.0",
+    "hardhat": "^2.26.0"
+  }
+}
